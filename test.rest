@@ -1,0 +1,121 @@
+### ///////////////////////////$$$$$$$$$ AUTH $$$$$$$$$\\\\\\\\\\\\\\\\\\\\\\\\\\\ ###
+
+POST http://127.0.0.1:8000/api/v1/auth/login/
+Content-Type: application/json
+
+{"email": "osmonoy001@gmail.com", "password": "Azizbek1779"}
+
+
+########
+
+POST http://127.0.0.1:8000/api/v1/auth/signup/
+Content-Type: application/json
+
+{"email": "osmonoy001@gmail.com", "password": "Azizbek1779", "first_name":"Osmonoy", "last_name":"Osmonov"}
+
+########
+
+POST http://127.0.0.1:8000/api/v1/auth/token/test/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+
+########
+
+POST http://127.0.0.1:8000/api/v1/auth/token/change/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+
+### ///////////////////////////$$$$$$$$$ STORE $$$$$$$$$\\\\\\\\\\\\\\\\\\\\\\\\\\\ ###
+
+GET http://127.0.0.1:8000/api/v1/store/category?sort=1
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+#########
+
+GET http://127.0.0.1:8000/api/v1/store/category/4
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+#########
+
+GET http://127.0.0.1:8000/api/v1/store/product/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+#########
+
+GET http://127.0.0.1:8000/api/v1/store/product/1
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+#########
+
+GET http://127.0.0.1:8000/api/v1/store/review/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+#########
+
+POST http://127.0.0.1:8000/api/v1/store/review/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{"product": 1, "rating": 5, "text": "O'ta go'zal"}
+
+
+######### GET CART ITEM
+
+GET http://127.0.0.1:8000/api/v1/store/cart/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+######### ADD CART ITEM
+
+POST http://127.0.0.1:8000/api/v1/store/cart/
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{"product": 1, "quantity": 1}
+
+######### GET CART ITEM
+
+GET http://127.0.0.1:8000/api/v1/store/cart/2
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
+
+######### UPDATE CART ITEM
+
+PUT http://127.0.0.1:8000/api/v1/store/cart/2
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{"quantity": 10}
+
+######### DELETE CART ITEM
+
+DELETE http://127.0.0.1:8000/api/v1/store/cart/2
+Content-Type: application/json
+Authorization: Token 24d8f00fef7b42f0258f637b033bb777ddc1bc16
+
+{}
